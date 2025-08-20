@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Windows 11 Start Menu</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url("https://wallpapercave.com/wp/wp10316558.jpg") no-repeat center/cover;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    /* 开始菜单 */
+    .start-menu {
+      width: 380px;
+      height: 500px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(20px);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 60px;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+
+    /* 图标区域 */
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .app {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .app:hover {
+      background: rgba(255,255,255,0.7);
+      transform: scale(1.1);
+    }
+
+    /* 任务栏 */
+    .taskbar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(15px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .taskbar button {
+      width: 48px
